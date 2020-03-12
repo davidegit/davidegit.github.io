@@ -1,32 +1,19 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
-  </div>
+  <v-app>
+    <v-app-bar app>
+      <v-toolbar-title>
+        <a href="https://github.com/davidegit" target="_blank" style="text-decoration: none;">@DavideGit</a>
+      </v-toolbar-title>
+    </v-app-bar>
+    <v-content>
+      <v-container fluid>
+        <v-row justify="center">
+          <v-btn color="primary" href="https://davidegit.github.io/vue-ui-table/index.html" target="_blank">Vue UiTable</v-btn>
+        </v-row>
+      </v-container>
+    </v-content>
+    <v-footer app>
+      <span class="px-4">&copy; {{ new Date().getFullYear() }} @DavideGit</span>
+    </v-footer>
+  </v-app>
 </template>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
-</style>
